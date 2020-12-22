@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link type="text/css" rel="Stylesheet" href="./style/index.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- 首页 -->
+      <div class="content" v-show="step==='0'" @click="onStepClick('0')">
+        <div class="earth" role="img"></div>
+      </div>
+      <!-- p2 -->
+      <div id="p2" v-show="step==='1'">
+        <div class="p2-word"></div>
+        <div class="pic">
+          <img class="" src="./img/p2/P2-1.jpg" />
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="./script/index.js"></script>
+  </body>
+</html>
