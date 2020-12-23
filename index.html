@@ -1,28 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link type="text/css" rel="Stylesheet" href="./style/index.css" />
-  </head>
-  <body>
-    <div id="app">
-      <!-- 首页 -->
-      <div class="content" v-show="step==='0'" @click="onStepClick('0')">
-        <div class="earth" role="img"></div>
-      </div>
-      <!-- p2 -->
-      <div id="p2" v-show="step==='1'">
-        <div class="p2-word"></div>
-        <div class="pic">
-          <img class="" src="./img/p2/P2-1.jpg" />
-        </div>
-      </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-    <script src="./script/index.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>地球</title>
+		<link type="text/css" rel="Stylesheet" href="./style/swiper.min.css" />
+		<link type="text/css" rel="Stylesheet" href="./style/index.css" />
+	</head>
+	<body>
+		<div id="app">
+			<!-- 首页 -->
+			<div class="content" v-show="step==='0'" @click="onStepClick('1')">
+				<div class="earth" role="img"></div>
+			</div>
+			<!-- p2 -->
+			<div id="p2" v-show="step==='1'">
+				<div class="p2-word"></div>
+				<div class="pic">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img class="swiper-pic" src="./img/p2/P2-1.jpg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img class="swiper-pic" src="./img/p2/P2-2.jpg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img class="swiper-pic" src="./img/p2/P2-3.jpg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img class="swiper-pic" src="./img/p2/P2-4.jpg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img class="swiper-pic" src="./img/p2/P2-5.jpg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img class="swiper-pic" src="./img/p2/P2-6.jpg" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btn-wrapper">
+					<img @click="onStepClick('0')" class="btn" src="./img/left.png" alt="" />
+					<img @click="onStepClick('2')" class="btn" src="./img//right.png" alt="" />
+				</div>
+			</div>
+			<!-- p3 -->
+			<div id="p3" v-show="step==='2'">
+				<div class="p3-category">
+					<ol>
+						<li><a href="javascript: void 0">生物多样性很重要</a></li>
+						<li>
+							<a href="javascript: void 0">中国的生物多样性</a>
+							<ol class="p3-sub-category">
+								<li><a href="javascript: void 0">物种高度丰富</a></li>
+								<li><a href="javascript: void 0">特有属、种繁多</a></li>
+								<li><a href="javascript: void 0">区系起源古老</a></li>
+								<li>
+									<a href="javascript: void 0">栽培植物、家养动物及其野生亲缘种的种质资源异常丰富</a>
+								</li>
+								<li><a href="javascript: void 0">生态系统的类型丰富</a></li>
+								<li><a href="javascript: void 0">空间格局繁复多样</a></li>
+							</ol>
+						</li>
+						<li><a href="javascript: void 0">人类生态系统的现状</a></li>
+					</ol>
+				</div>
+				<div class="p3-gif">
+					<img src="./img/cartoon2.gif" alt="" />
+				</div>
+				<div class="btn-wrapper">
+					<img @click="onStepClick('1')" class="btn" src="./img/left.png" alt="" />
+					<img @click="onStepClick('3')" class="btn" src="./img//right.png" alt="" />
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+		<script src="./script/swiper.min.js"></script>
+		<script src="./script/index.js"></script>
+	</body>
 </html>
