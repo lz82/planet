@@ -25,7 +25,7 @@ html, body {
   cursor: pointer;
 }
 
-#p2 {
+.p2 {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -39,7 +39,7 @@ html, body {
 }
 
 
-#p2 .p2-word { 
+.p2-word { 
   flex: 0 0 40%;
   padding: 30px 10px 10px 10px;
   height: 100%;
@@ -50,14 +50,14 @@ html, body {
   font-size: 16px;
 }
 
-#p2 .pic {
+.p2-pic {
   flex: 0 0 60%;
   padding: 10px;
   box-sizing: border-box;
   height: 100%;
 }
 
-#p2 .btn-wrapper {
+.p2 .btn-wrapper {
   position: absolute;
   left: 10px;
   bottom: 0px;
@@ -86,13 +86,16 @@ html, body {
 
 .p3-category { 
   flex: 0 0 50%;
-  padding: 30px 10px 10px 10px;
+  /* padding: 20px 10px 10px 10px; */
   height: 100%;
   box-sizing: border-box;
   text-align: center;
   white-space: pre-wrap;
   line-height: 12px;
   font-size: 16px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
 }
 
 .p3-gif {
@@ -100,13 +103,17 @@ html, body {
   padding: 10px;
   box-sizing: border-box;
   height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
 }
 
 #p3 .btn-wrapper {
   position: absolute;
   left: 30px;
   bottom: 20px;
-  width: calc(100vw * 0.4);
+  width: calc(100vw * 0.45);
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -184,24 +191,62 @@ html, body {
 				-webkit-border-radius: 2em;
 				border-radius: 2em;
         color:#FFF;
-      }
+}
       
-      .p3-sub-category a:before {
-         content: counter(li);
-         counter-increment: li;
-         position: absolute;	
-         left: -1.3em;
-         top: 50%;
-         margin-top: -1.3em;
-         background: #87ceeb;
-         height: 2em;
-         width: 2em;
-         line-height: 2em;
-         border: .3em solid #fff;
-         text-align: center;
-         font-weight: bold;
-         -moz-border-radius: 2em;
-         -webkit-border-radius: 2em;
-         border-radius: 2em;
-         color:#FFF;
-      }
+.p3-sub-category a:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;	
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #87ceeb;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #fff;
+    text-align: center;
+    font-weight: bold;
+    -moz-border-radius: 2em;
+    -webkit-border-radius: 2em;
+    border-radius: 2em;
+    color:#FFF;
+}
+
+.p3-1-pic {
+  display: flex;
+  flex-flow: row nowrap;
+
+  justify-content: space-between;
+  
+}
+
+.p3-1-pic li {
+  flex: 0 0 20%;
+  list-style-type: none;
+}
+
+.p3-1-pic li img{
+  width: 100%;
+}
+
+.modal-p3-common-pic {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-self: center;
+}
+
+.modal-p3-common-pic img{
+  width: 100%;
+}
+
+#p4-word {
+  line-height: 20px;
+  text-align: left;
+}
+
+.poor {
+  position: absolute;
+  top: 10px;
+  left: 10vw;
+}
