@@ -5,6 +5,10 @@ html, body {
   height: 100vh;
 }
 
+[v-cloak]{
+  display: none !important;
+}
+
 #app {
   background: #f7fefe;
   width: 100vw;
@@ -139,6 +143,7 @@ html, body {
 }
 
 .p5-pic {
+  width: calc(100vw * 0.5);
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -146,8 +151,8 @@ html, body {
 
 .p5-pic .img {
   flex: 0 0 19%;
-  display: flex;
-  flex-flow: column nowrap;
+  /* display: flex; */
+  /* flex-flow: column nowrap; */
 }
 
 .p5-pic .img span {
@@ -159,7 +164,7 @@ html, body {
 
 .p5-pic .img img {
   width: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 .swiper-pic {

@@ -11,11 +11,11 @@
 	<body>
 		<div id="app">
 			<!-- 首页 -->
-			<div class="content" v-show="step==='0'" @click="onStepClick('1')">
+			<div class="content" v-cloak v-show="step==='0'" @click="onStepClick('1')">
 				<div class="earth" role="img"></div>
 			</div>
 			<!-- p2 -->
-			<div id="p2" class="p2" v-show="step==='1'">
+			<div id="p2" class="p2" v-cloak v-show="step==='1'">
 				<div id="p2-word" class="p2-word"></div>
 				<div class="p2-pic">
 					<div id="p2Swiper" class="swiper-container">
@@ -47,7 +47,7 @@
 				</div>
 			</div>
 			<!-- p3 -->
-			<div id="p3" class="p3" v-show="step==='2'">
+			<div id="p3" class="p3" v-cloak v-show="step==='2'">
 				<div class="p3-category">
 					<ol>
 						<li><a href="#p3-1">生物多样性很重要</a></li>
@@ -284,7 +284,7 @@
 				</section>
 			</div>
 			<!-- p4 -->
-			<div id="p4" class="p2" v-show="step==='3'">
+			<div id="p4" class="p2" v-cloak v-show="step==='3'">
 				<img class="poor" src="./img/poor.gif" />
 				<div id="p4-word" class="p2-word" style="padding-top: 150px"></div>
 				<div class="p2-pic">
@@ -314,7 +314,7 @@
 				</div>
 			</div>
 			<!-- p5 -->
-			<div id="p5" class="p3" v-show="step==='4'">
+			<div id="p5" class="p3" v-cloak v-show="step==='4'">
 				<div class="p3-gif p5-gif">
 					<h1>如何解决这些问题?</h1>
 					<img src="./img/question-mask.gif" alt="" />
@@ -372,10 +372,10 @@
 				</div>
 			</div>
 			<!-- p6 -->
-			<div id="p6" class="p3" v-show="step==='5'">
+			<div id="p6" class="p3" v-cloak v-show="step==='5'">
 				<div class="p3-gif">
 					<img src="./img/cartoon.gif" alt="" style="cursor: pointer" @click="onStepClick('0')" />
-					<a alt="点击有彩蛋" href="#p6m"><img class="egg" src="./img/egg.png" /></a>
+					<a alt="点击有彩蛋" href="#p6m"><img class="egg" src="./img/egg.jpg" /></a>
 				</div>
 				<div id="p6-word" class="p2-word"></div>
 				<div class="btn-wrapper">
