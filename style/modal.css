@@ -178,11 +178,11 @@ html {
   @media screen and (max-height: 46em) and (min-width: 30em) {
     .modal--fade .modal-content, .modal--show .modal-content {
       max-height: 340px;
-      max-height: 50vh; } }
+      max-height: 75vh; } }
   @media screen and (max-height: 36em) and (min-width: 30em) {
     .modal--fade .modal-content, .modal--show .modal-content {
       max-height: 265px;
-      max-height: 40vh; } }
+      max-height: 75vh; } }
   .is-stacked.modal--fade, .is-stacked.modal--show {
     -webkit-transform: translate(0, 0) scale(1, 1);
     -moz-transform: translate(0, 0) scale(1, 1);

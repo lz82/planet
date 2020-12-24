@@ -10,7 +10,7 @@ var app = new Vue({
 		p6TypedJs: false,
 	},
 
-	mounted: function() {
+	mounted: function () {
 		particlesJS('app', {
 			particles: {
 				number: {
@@ -144,7 +144,7 @@ var app = new Vue({
 					this.p2TypedJs = true;
 				}
 				if (!this.p2Swiper) {
-					setTimeout(function() {
+					setTimeout(function () {
 						this.p2Swiper = new Swiper('#p2Swiper', {
 							loop: true, // 循环模式选项
 							autoplay: {
@@ -159,7 +159,7 @@ var app = new Vue({
 						});
 					}, 300);
 				} else {
-					this.$nextTick(function() {
+					this.$nextTick(function () {
 						// this.p2Swiper.autoplay.run();
 						this.p2Swiper.destroy();
 						setTimeout(function () {
@@ -183,7 +183,7 @@ var app = new Vue({
 				if (!this.p4TypedJs) {
 					new Typed('#p4-word', {
 						strings: [
-							'<div>2020年，注定是一个让人难以忘怀的一年。菲律宾火山爆发数万居民撤离，克什米尔雪崩至今70人死亡，非洲25年以来最严重的蝗灾，湖北武汉新型肺炎爆发，西班牙遭遇强风暴……</div>\n`<div>世界安静下来，我们听得到心跳的声音。经历过生死与突如其来的变故，让我们可以更加体会到雨果曾过的:“大自然既是善良的慈母，也是冷酷的屠夫。”</div>\n`<div>当大海里打捞出来的全是被垃圾毒害的生灵，当全球变暖海平面上升，当动物无家可归……我们是否意识到人类是世界上最特殊的物种，但当生存唾手可得时，我们便忘记了自己也只是这万千物种中的一员？</div>\n',
+							'<div>2020年，注定是一个让人难以忘怀的一年。</div>\n<div>菲律宾火山爆发数万居民撤离，克什米尔雪崩至今70人死亡，</div>\n<div>非洲25年以来最严重的蝗灾，湖北武汉新型肺炎爆发，</div>\n<div>西班牙遭遇强风暴……</div>\n<div>世界安静下来，我们听得到心跳的声音。</div>\n<div>经历过生死与突如其来的变故，</div>\n<div>让我们可以更加体会到雨果曾过的:</div>\n<div>“大自然既是善良的慈母，也是冷酷的屠夫。”</div>\n<div>当大海里打捞出来的全是被垃圾毒害的生灵，</div>\n<div>当全球变暖海平面上升，当动物无家可归……</div>\n<div>我们是否意识到人类是世界上最特殊的物种，但当生存唾手可得时，</div>\n<div>我们便忘记了自己也只是这万千物种中的一员？</div>\n',
 						],
 						smartBackspace: true, // Default value
 						typeSpeed: 50, //打印速度
@@ -194,7 +194,7 @@ var app = new Vue({
 					this.p4TypedJs = true;
 				}
 				if (!this.p4Swiper) {
-					setTimeout(function (){
+					setTimeout(function () {
 						this.p4Swiper = new Swiper('#p4Swiper', {
 							loop: true, // 循环模式选项
 							autoplay: {
@@ -209,7 +209,7 @@ var app = new Vue({
 						});
 					}, 300);
 				} else {
-					setTimeout(function() {
+					setTimeout(function () {
 						// this.p4Swiper.autoplay.run();
 						this.p4Swiper.destroy();
 						setTimeout(function () {
@@ -232,8 +232,7 @@ var app = new Vue({
 				if (!this.p6TypedJs) {
 					new Typed('#p6-word', {
 						strings: [
-							'<span>甘甜的河水，清新的空气</span>\n<span>茂密的森林，翠绿的松柏</span>\n<span>奇妙的海洋世界……</span>\n<span>从动物、植物到微生物</span>\n<span>丰富多彩的自然界使我们的地球充满生机</span>\n<span>这样的美景要靠我们每个人去实现</span>\n<span>为我们的地球母亲行动起来</span>\n<span>贡献自己的一份力吧</span>'
-							,
+							'<span>甘甜的河水，清新的空气</span>\n<span>茂密的森林，翠绿的松柏</span>\n<span>奇妙的海洋世界……</span>\n<span>从动物、植物到微生物</span>\n<span>丰富多彩的自然界使我们的地球充满生机</span>\n<span>这样的美景要靠我们每个人去实现</span>\n<span>为我们的地球母亲行动起来</span>\n<span>贡献自己的一份力吧</span>',
 						],
 						smartBackspace: true, // Default value
 						typeSpeed: 30, //打印速度
