@@ -11,8 +11,11 @@
 	<body>
 		<div id="app">
 			<!-- 首页 -->
-			<div class="content" v-cloak v-show="step==='0'" @click="onStepClick('1')">
-				<div class="earth" role="img"></div>
+			<div id="p1" v-cloak v-show="step==='0'">
+				<h1 class="p1-title">生物多样性</h1>
+				<div class="content" @click="onStepClick('1')">
+					<div class="earth" role="img"></div>
+				</div>
 			</div>
 			<!-- p2 -->
 			<div id="p2" class="p2" v-cloak v-show="step==='1'">
