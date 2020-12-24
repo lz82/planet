@@ -30,11 +30,8 @@ html, body {
 }
 
 .p1-title {
+  padding-top: 20px;
   text-align: center;
-  padding-top: 30px;
-  color: #67A957;
-  letter-spacing: 0;
-  text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
 }
 
 .p2 {
@@ -219,7 +216,8 @@ html, body {
 				text-decoration: none;
 				-moz-border-radius: .3em;
 				-webkit-border-radius: .3em;
-				border-radius: .3em;
+        border-radius: .3em;
+        text-align: left;
 			}
 
 .p3-category a:hover{
@@ -359,6 +357,11 @@ html, body {
 
 .p6-modal {
   display: flex;
+  flex-flow: column nowrap;
+}
+
+.p6-modal .txt {
+  display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
 }
@@ -368,4 +371,8 @@ html, body {
   line-height: 22px;
   color: rgba(0,0,0,0.7);
   font-size: 14px;
+}
+
+.p6-modal img {
+  width: 100%;
 }
