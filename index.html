@@ -1,404 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>地球</title>
-    <link type="text/css" rel="Stylesheet" href="./style/swiper.min.css" />
-    <link type="text/css" rel="Stylesheet" href="./style/modal.css" />
-    <link type="text/css" rel="Stylesheet" href="./style/index.css" />
-  </head>
-  <body>
-    <div id="app">
-      <!-- 首页 -->
-      <div class="content" v-show="step==='0'" @click="onStepClick('1')">
-        <div class="earth" role="img"></div>
-      </div>
-      <!-- p2 -->
-      <div id="p2" class="p2" v-show="step==='1'">
-        <div id="p2-word" class="p2-word"></div>
-        <div class="p2-pic">
-          <div id="p2Swiper" class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img class="swiper-pic" src="./img/p2/P2-1.jpg" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img class="swiper-pic" src="./img/p2/P2-2.jpg" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img class="swiper-pic" src="./img/p2/P2-3.jpg" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img class="swiper-pic" src="./img/p2/P2-4.jpg" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img class="swiper-pic" src="./img/p2/P2-5.jpg" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img class="swiper-pic" src="./img/p2/P2-6.jpg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="btn-wrapper">
-          <img
-            @click="onStepClick('0')"
-            class="btn"
-            src="./img/left.png"
-            alt=""
-          />
-          <img
-            @click="onStepClick('2')"
-            class="btn"
-            src="./img//right.png"
-            alt=""
-          />
-        </div>
-      </div>
-      <!-- p3 -->
-      <div id="p3" v-show="step==='2'">
-        <div class="p3-category">
-          <ol>
-            <li><a href="#p3-1">生物多样性很重要</a></li>
-            <li>
-              <a href="javascript: void 0">中国的生物多样性</a>
-              <ol class="p3-sub-category">
-                <li><a href="#p3-2-1">物种高度丰富</a></li>
-                <li><a href="#p3-2-2">特有属、种繁多</a></li>
-                <li><a href="#p3-2-3">区系起源古老</a></li>
-                <li>
-                  <a href="#p3-2-4"
-                    >栽培植物、家养动物及其野生亲缘种的种质资源异常丰富</a
-                  >
-                </li>
-                <li><a href="#p3-2-5">生态系统的类型丰富</a></li>
-                <li><a href="#p3-2-6">空间格局繁复多样</a></li>
-              </ol>
-            </li>
-            <li><a href="#p3-3">人类生态系统的现状</a></li>
-          </ol>
-        </div>
-        <div class="p3-gif">
-          <img src="./img/cartoon2.gif" alt="" />
-        </div>
-        <div class="btn-wrapper">
-          <img
-            @click="onStepClick('1')"
-            class="btn"
-            src="./img/left.png"
-            alt=""
-          />
-          <img
-            @click="onStepClick('3')"
-            class="btn"
-            src="./img//right.png"
-            alt=""
-          />
-        </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>地球</title>
+		<link type="text/css" rel="Stylesheet" href="./style/swiper.min.css" />
+		<link type="text/css" rel="Stylesheet" href="./style/modal.css" />
+		<link type="text/css" rel="Stylesheet" href="./style/index.min.css" />
+	</head>
+	<body>
+		<div id="app">
+			<!-- 首页 -->
+			<div class="content" v-show="step==='0'" @click="onStepClick('1')">
+				<div class="earth" role="img"></div>
+			</div>
+			<!-- p2 -->
+			<div id="p2" class="p2" v-show="step==='1'">
+				<div id="p2-word" class="p2-word"></div>
+				<div class="p2-pic">
+					<div id="p2Swiper" class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img class="swiper-pic" src="./img/p2/P2-1.jpg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img class="swiper-pic" src="./img/p2/P2-2.jpg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img class="swiper-pic" src="./img/p2/P2-3.jpg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img class="swiper-pic" src="./img/p2/P2-4.jpg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img class="swiper-pic" src="./img/p2/P2-5.jpg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img class="swiper-pic" src="./img/p2/P2-6.jpg" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btn-wrapper">
+					<img @click="onStepClick('0')" class="btn" src="./img/left.png" alt="" />
+					<img @click="onStepClick('2')" class="btn" src="./img//right.png" alt="" />
+				</div>
+			</div>
+			<!-- p3 -->
+			<div id="p3" class="p3" v-show="step==='2'">
+				<div class="p3-category">
+					<ol>
+						<li><a href="#p3-1">生物多样性很重要</a></li>
+						<li>
+							<a href="javascript: void 0">中国的生物多样性</a>
+							<ol class="p3-sub-category">
+								<li><a href="#p3-2-1">物种高度丰富</a></li>
+								<li><a href="#p3-2-2">特有属、种繁多</a></li>
+								<li><a href="#p3-2-3">区系起源古老</a></li>
+								<li>
+									<a href="#p3-2-4">栽培植物、家养动物及其野生亲缘种的种质资源异常丰富</a>
+								</li>
+								<li><a href="#p3-2-5">生态系统的类型丰富</a></li>
+								<li><a href="#p3-2-6">空间格局繁复多样</a></li>
+							</ol>
+						</li>
+						<li><a href="#p3-3">人类生态系统的现状</a></li>
+					</ol>
+				</div>
+				<div class="p3-gif">
+					<img src="./img/cartoon2.gif" alt="" />
+				</div>
+				<div class="btn-wrapper">
+					<img @click="onStepClick('1')" class="btn" src="./img/left.png" alt="" />
+					<img @click="onStepClick('3')" class="btn" src="./img//right.png" alt="" />
+				</div>
 
-        <section
-          class="modal--show"
-          id="p3-1"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="modal-label"
-          aria-hidden="true"
-        >
-          <div class="modal-inner">
-            <header id="modal-label" class="modal-title">
-              生物多样性很重要
-            </header>
-            <div class="modal-content">
-              <p>
-                生物多样性可以看作是一张复杂的生命网，各个组成部分相互依存。一旦一个要素发生变化（甚至消失），整个系统都会受到影响，产生正面或负面的后果。拥有丰富生物多样性的健康生态系统是人类生存的基础。生态系统以多种方式维持人类的生活：它为我们提供清洁的空气和水、富有营养的食物、纯天然的药物和原材料，帮助我们抵抗疾病和缓解气候变化，减少灾难的发生。
-              </p>
-              <ul class="p3-1-pic">
-                <li>
-                  <img src="./img/p3/P3-1.jpg" />
-                </li>
-                <li>
-                  <img src="./img/p3/P3-2.jpg" />
-                </li>
-                <li>
-                  <img src="./img/p3/P3-3.jpg" />
-                </li>
-                <li>
-                  <img src="./img/p3/P3-4.jpg" />
-                </li>
-              </ul>
-            </div>
-            <footer><!-- Footer --></footer>
-          </div>
-          <a
-            href="#!"
-            class="modal-close"
-            title="Close this modal"
-            data-close="Close"
-            data-dismiss="modal"
-            >?</a
-          >
-        </section>
+				<section
+					class="modal--show"
+					id="p3-1"
+					tabindex="-1"
+					role="dialog"
+					aria-labelledby="modal-label"
+					aria-hidden="true"
+				>
+					<div class="modal-inner">
+						<header id="modal-label" class="modal-title">生物多样性很重要</header>
+						<div class="modal-content">
+							<p>
+								生物多样性可以看作是一张复杂的生命网，各个组成部分相互依存。一旦一个要素发生变化（甚至消失），整个系统都会受到影响，产生正面或负面的后果。拥有丰富生物多样性的健康生态系统是人类生存的基础。生态系统以多种方式维持人类的生活：它为我们提供清洁的空气和水、富有营养的食物、纯天然的药物和原材料，帮助我们抵抗疾病和缓解气候变化，减少灾难的发生。
+							</p>
+							<ul class="p3-1-pic">
+								<li>
+									<img src="./img/p3/P3-1.jpg" />
+								</li>
+								<li>
+									<img src="./img/p3/P3-2.jpg" />
+								</li>
+								<li>
+									<img src="./img/p3/P3-3.jpg" />
+								</li>
+								<li>
+									<img src="./img/p3/P3-4.jpg" />
+								</li>
+							</ul>
+						</div>
+						<footer><!-- Footer --></footer>
+					</div>
+					<a href="#!" class="modal-close" title="Close this modal" data-close="Close" data-dismiss="modal"
+						>?</a
+					>
+				</section>
 
-        <section
-          class="modal--show"
-          id="p3-2-1"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="modal-label"
-          aria-hidden="true"
-        >
-          <div class="modal-inner">
-            <header id="modal-label" class="modal-title">物种高度丰富</header>
-            <div class="modal-content">
-              <p>
-                中国有高等植物3万余种，仅次于世界高等植物最丰富的巴西和哥伦比亚。
-              </p>
-              <div class="modal-p3-common-pic">
-                <img src="./img/p3/P5.jpg" />
-              </div>
-            </div>
-          </div>
-          <a
-            href="#!"
-            class="modal-close"
-            title="Close this modal"
-            data-close="Close"
-            data-dismiss="modal"
-            >?</a
-          >
-        </section>
+				<section
+					class="modal--show"
+					id="p3-2-1"
+					tabindex="-1"
+					role="dialog"
+					aria-labelledby="modal-label"
+					aria-hidden="true"
+				>
+					<div class="modal-inner">
+						<header id="modal-label" class="modal-title">物种高度丰富</header>
+						<div class="modal-content">
+							<p>中国有高等植物3万余种，仅次于世界高等植物最丰富的巴西和哥伦比亚。</p>
+							<div class="modal-p3-common-pic">
+								<img src="./img/p3/P5.jpg" />
+							</div>
+						</div>
+					</div>
+					<a href="#!" class="modal-close" title="Close this modal" data-close="Close" data-dismiss="modal"
+						>?</a
+					>
+				</section>
 
-        <section
-          class="modal--show"
-          id="p3-2-2"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="modal-label"
-          aria-hidden="true"
-        >
-          <div class="modal-inner">
-            <header id="modal-label" class="modal-title">特有属、种繁多</header>
-            <div class="modal-content">
-              <p>
-                中国高等植物中特有种最多，约17300种，占全国高等植物的57%以上。581种哺乳动物中，特有种约110种，约占19%。尤为人们所注意的是有活化石之称的大熊猫、白鳍豚、水杉、银杏、银杉和攀枝花苏铁，等等。
-              </p>
-              <div class="modal-p3-common-pic">
-                <img src="./img/p3/P6.jpg" />
-              </div>
-            </div>
-          </div>
-          <a
-            href="#!"
-            class="modal-close"
-            title="Close this modal"
-            data-close="Close"
-            data-dismiss="modal"
-            >?</a
-          >
-        </section>
+				<section
+					class="modal--show"
+					id="p3-2-2"
+					tabindex="-1"
+					role="dialog"
+					aria-labelledby="modal-label"
+					aria-hidden="true"
+				>
+					<div class="modal-inner">
+						<header id="modal-label" class="modal-title">特有属、种繁多</header>
+						<div class="modal-content">
+							<p>
+								中国高等植物中特有种最多，约17300种，占全国高等植物的57%以上。581种哺乳动物中，特有种约110种，约占19%。尤为人们所注意的是有活化石之称的大熊猫、白鳍豚、水杉、银杏、银杉和攀枝花苏铁，等等。
+							</p>
+							<div class="modal-p3-common-pic">
+								<img src="./img/p3/P6.jpg" />
+							</div>
+						</div>
+					</div>
+					<a href="#!" class="modal-close" title="Close this modal" data-close="Close" data-dismiss="modal"
+						>?</a
+					>
+				</section>
 
-        <section
-          class="modal--show"
-          id="p3-2-3"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="modal-label"
-          aria-hidden="true"
-        >
-          <div class="modal-inner">
-            <header id="modal-label" class="modal-title">区系起源古老</header>
-            <div class="modal-content">
-              <p>
-                由于中生代末中国大部分地区已上升为陆地，在第四纪冰期又未遭受大陆冰川的影响，所以各地都在不同程度上保存着白垩纪、第三纪的古老残遗成分。如松杉类植物，世界现存7个科中，中国有6个科。动物中的大熊猫、白鳍豚、羚羊、扬子鳄、大鲵等都是古老孑遗物种。
-              </p>
-              <div class="modal-p3-common-pic">
-                <img src="./img/p3/P7.jpg" />
-              </div>
-            </div>
-          </div>
-          <a
-            href="#!"
-            class="modal-close"
-            title="Close this modal"
-            data-close="Close"
-            data-dismiss="modal"
-            >?</a
-          >
-        </section>
+				<section
+					class="modal--show"
+					id="p3-2-3"
+					tabindex="-1"
+					role="dialog"
+					aria-labelledby="modal-label"
+					aria-hidden="true"
+				>
+					<div class="modal-inner">
+						<header id="modal-label" class="modal-title">区系起源古老</header>
+						<div class="modal-content">
+							<p>
+								由于中生代末中国大部分地区已上升为陆地，在第四纪冰期又未遭受大陆冰川的影响，所以各地都在不同程度上保存着白垩纪、第三纪的古老残遗成分。如松杉类植物，世界现存7个科中，中国有6个科。动物中的大熊猫、白鳍豚、羚羊、扬子鳄、大鲵等都是古老孑遗物种。
+							</p>
+							<div class="modal-p3-common-pic">
+								<img src="./img/p3/P7.jpg" />
+							</div>
+						</div>
+					</div>
+					<a href="#!" class="modal-close" title="Close this modal" data-close="Close" data-dismiss="modal"
+						>?</a
+					>
+				</section>
 
-        <section
-          class="modal--show"
-          id="p3-2-4"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="modal-label"
-          aria-hidden="true"
-        >
-          <div class="modal-inner">
-            <header id="modal-label" class="modal-title">
-              栽培植物、家养动物及其野生亲缘种的种质资源异常丰富
-            </header>
-            <div class="modal-content">
-              <p>
-                中国有数千年的农业开垦历史，很早就对自然环境中所蕴藏的丰富多彩的遗传资源进行开发利用、培植繁育，因而中国的栽培植物和家养动物的丰富度在全世界是独一无二、无与伦比的。例如，我国有经济树种1000种以上。中国是水稻的原产地之一，有地方品种50000个；是大豆的故乡，有地方品种20000个；有药用植物11000多种等等。
-              </p>
-              <div class="modal-p3-common-pic">
-                <img src="./img/p3/P8.jpg" />
-              </div>
-            </div>
-          </div>
-          <a
-            href="#!"
-            class="modal-close"
-            title="Close this modal"
-            data-close="Close"
-            data-dismiss="modal"
-            >?</a
-          >
-        </section>
+				<section
+					class="modal--show"
+					id="p3-2-4"
+					tabindex="-1"
+					role="dialog"
+					aria-labelledby="modal-label"
+					aria-hidden="true"
+				>
+					<div class="modal-inner">
+						<header id="modal-label" class="modal-title">
+							栽培植物、家养动物及其野生亲缘种的种质资源异常丰富
+						</header>
+						<div class="modal-content">
+							<p>
+								中国有数千年的农业开垦历史，很早就对自然环境中所蕴藏的丰富多彩的遗传资源进行开发利用、培植繁育，因而中国的栽培植物和家养动物的丰富度在全世界是独一无二、无与伦比的。例如，我国有经济树种1000种以上。中国是水稻的原产地之一，有地方品种50000个；是大豆的故乡，有地方品种20000个；有药用植物11000多种等等。
+							</p>
+							<div class="modal-p3-common-pic">
+								<img src="./img/p3/P8.jpg" />
+							</div>
+						</div>
+					</div>
+					<a href="#!" class="modal-close" title="Close this modal" data-close="Close" data-dismiss="modal"
+						>?</a
+					>
+				</section>
 
-        <section
-          class="modal--show"
-          id="p3-2-5"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="modal-label"
-          aria-hidden="true"
-        >
-          <div class="modal-inner">
-            <header id="modal-label" class="modal-title">
-              生态系统的类型丰富
-            </header>
-            <div class="modal-content">
-              <p>
-                中国具有陆生生态系统的各种类型，包括森林、灌丛、草原和稀树草原、草甸、荒漠、高山冻原等。由于不同的气候、土壤等条件，又进一步分为各种亚类型约600种。如中国的森林有针叶林、针阔混交林和阔叶林；草甸有典型草甸、盐生草甸、沼泽化草甸和高寒草甸等。除此之外，中国海洋和淡水生态系统类型也很齐全。
-              </p>
-              <div class="modal-p3-common-pic">
-                <img src="./img/p3/P9.jpg" />
-              </div>
-            </div>
-          </div>
-          <a
-            href="#!"
-            class="modal-close"
-            title="Close this modal"
-            data-close="Close"
-            data-dismiss="modal"
-            >?</a
-          >
-        </section>
+				<section
+					class="modal--show"
+					id="p3-2-5"
+					tabindex="-1"
+					role="dialog"
+					aria-labelledby="modal-label"
+					aria-hidden="true"
+				>
+					<div class="modal-inner">
+						<header id="modal-label" class="modal-title">生态系统的类型丰富</header>
+						<div class="modal-content">
+							<p>
+								中国具有陆生生态系统的各种类型，包括森林、灌丛、草原和稀树草原、草甸、荒漠、高山冻原等。由于不同的气候、土壤等条件，又进一步分为各种亚类型约600种。如中国的森林有针叶林、针阔混交林和阔叶林；草甸有典型草甸、盐生草甸、沼泽化草甸和高寒草甸等。除此之外，中国海洋和淡水生态系统类型也很齐全。
+							</p>
+							<div class="modal-p3-common-pic">
+								<img src="./img/p3/P9.jpg" />
+							</div>
+						</div>
+					</div>
+					<a href="#!" class="modal-close" title="Close this modal" data-close="Close" data-dismiss="modal"
+						>?</a
+					>
+				</section>
 
-        <section
-          class="modal--show"
-          id="p3-2-6"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="modal-label"
-          aria-hidden="true"
-        >
-          <div class="modal-inner">
-            <header id="modal-label" class="modal-title">
-              空间格局繁复多样
-            </header>
-            <div class="modal-content">
-              <p>
-                中国地域辽阔，地势起伏多山，气候复杂多变，从北到南，气候跨寒温带、温带、暖温带、亚热带和热带，生物群落包括寒温带针叶林、温带针阔叶混交林、暖温带落叶阔叶林、亚热带常绿阔叶林、热带季雨林。从东到西，随着降水量的减少，在北方，针阔叶混交林和落叶阔叶林向西依次更替为草甸草原、典型草原、荒漠化草原、草原化荒漠、典型荒漠和极旱荒漠；在南方，东部亚热带常绿阔叶林（分布于江南丘陵）和西部亚热带常绿阔叶林（分布于云贵高原）在性质上有明显的不同，发生不少同属不同种的物种替代。
-              </p>
-              <div class="modal-p3-common-pic">
-                <img src="./img/p3/P10.jpg" />
-              </div>
-            </div>
-          </div>
-          <a
-            href="#!"
-            class="modal-close"
-            title="Close this modal"
-            data-close="Close"
-            data-dismiss="modal"
-            >?</a
-          >
-        </section>
+				<section
+					class="modal--show"
+					id="p3-2-6"
+					tabindex="-1"
+					role="dialog"
+					aria-labelledby="modal-label"
+					aria-hidden="true"
+				>
+					<div class="modal-inner">
+						<header id="modal-label" class="modal-title">空间格局繁复多样</header>
+						<div class="modal-content">
+							<p>
+								中国地域辽阔，地势起伏多山，气候复杂多变，从北到南，气候跨寒温带、温带、暖温带、亚热带和热带，生物群落包括寒温带针叶林、温带针阔叶混交林、暖温带落叶阔叶林、亚热带常绿阔叶林、热带季雨林。从东到西，随着降水量的减少，在北方，针阔叶混交林和落叶阔叶林向西依次更替为草甸草原、典型草原、荒漠化草原、草原化荒漠、典型荒漠和极旱荒漠；在南方，东部亚热带常绿阔叶林（分布于江南丘陵）和西部亚热带常绿阔叶林（分布于云贵高原）在性质上有明显的不同，发生不少同属不同种的物种替代。
+							</p>
+							<div class="modal-p3-common-pic">
+								<img src="./img/p3/P10.jpg" />
+							</div>
+						</div>
+					</div>
+					<a href="#!" class="modal-close" title="Close this modal" data-close="Close" data-dismiss="modal"
+						>?</a
+					>
+				</section>
 
-        <section
-          class="modal--show"
-          id="p3-3"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="modal-label"
-          aria-hidden="true"
-        >
-          <div class="modal-inner">
-            <header id="modal-label" class="modal-title">
-              人类生态系统的现状
-            </header>
-            <div class="modal-content">
-              <p>
-                2019年，联合国生物多样性和生态系统服务政府间科学政策平台（IPBES）发布报告称，人类对自然的开发速度远远超过自然自我更新的速度，这导致物种丧失的速度比自然速度快1000倍。
-                报告还指出，到2050年，将可能有多达100万种已知物种消失，尤其是无脊动物消失得如此之快，以至于一些科学家发出“‘昆虫末日’即将到来”的警告。
-              </p>
-              <p>
-                一对大象脚做的脚凳，20张豹皮做的鞋子、帽子和钱包，装着一袋袋干枯海马的板条箱……这些都是在机场和过境处被查封的物品
-              </p>
-              <div class="modal-p3-common-pic">
-                <img src="./img/p3/P11.jpg" />
-              </div>
-            </div>
-          </div>
-          <a
-            href="#!"
-            class="modal-close"
-            title="Close this modal"
-            data-close="Close"
-            data-dismiss="modal"
-            >?</a
-          >
-        </section>
-      </div>
-      <div id="p4" class="p2" v-show="step==='3'">
-        <img class="poor" src="./img/poor.gif" />
-        <div id="p4-word" class="p2-word" style="padding-top: 150px"></div>
-        <div class="p2-pic">
-          <div id="p4Swiper" class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img class="swiper-pic" src="./img/p4/P12-1.jpg" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img class="swiper-pic" src="./img/p4/P12-2.jpg" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img class="swiper-pic" src="./img/p4/P12-3.jpg" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img class="swiper-pic" src="./img/p4/P12-4.jpg" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img class="swiper-pic" src="./img/p4/P12-5.jpg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="btn-wrapper">
-          <img
-            @click="onStepClick('2')"
-            class="btn"
-            src="./img/left.png"
-            alt=""
-          />
-          <img
-            @click="onStepClick('4')"
-            class="btn"
-            src="./img//right.png"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-    <script src="./script/swiper.min.js"></script>
-    <script src="./script/index.js"></script>
-  </body>
+				<section
+					class="modal--show"
+					id="p3-3"
+					tabindex="-1"
+					role="dialog"
+					aria-labelledby="modal-label"
+					aria-hidden="true"
+				>
+					<div class="modal-inner">
+						<header id="modal-label" class="modal-title">人类生态系统的现状</header>
+						<div class="modal-content">
+							<p>
+								2019年，联合国生物多样性和生态系统服务政府间科学政策平台（IPBES）发布报告称，人类对自然的开发速度远远超过自然自我更新的速度，这导致物种丧失的速度比自然速度快1000倍。
+								报告还指出，到2050年，将可能有多达100万种已知物种消失，尤其是无脊动物消失得如此之快，以至于一些科学家发出“‘昆虫末日’即将到来”的警告。
+							</p>
+							<p>
+								一对大象脚做的脚凳，20张豹皮做的鞋子、帽子和钱包，装着一袋袋干枯海马的板条箱……这些都是在机场和过境处被查封的物品
+							</p>
+							<div class="modal-p3-common-pic">
+								<img src="./img/p3/P11.jpg" />
+							</div>
+						</div>
+					</div>
+					<a href="#!" class="modal-close" title="Close this modal" data-close="Close" data-dismiss="modal"
+						>?</a
+					>
+				</section>
+			</div>
+			<!-- p4 -->
+			<div id="p4" class="p2" v-show="step==='3'">
+				<img class="poor" src="./img/poor.gif" />
+				<div id="p4-word" class="p2-word" style="padding-top: 150px"></div>
+				<div class="p2-pic">
+					<div id="p4Swiper" class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img class="swiper-pic" src="./img/p4/P12-1.jpg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img class="swiper-pic" src="./img/p4/P12-2.jpg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img class="swiper-pic" src="./img/p4/P12-3.jpg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img class="swiper-pic" src="./img/p4/P12-4.jpg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img class="swiper-pic" src="./img/p4/P12-5.jpg" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btn-wrapper">
+					<img @click="onStepClick('2')" class="btn" src="./img/left.png" alt="" />
+					<img @click="onStepClick('4')" class="btn" src="./img//right.png" alt="" />
+				</div>
+			</div>
+			<!-- p5 -->
+			<div id="p5" class="p3" v-show="step==='4'">
+				<div class="p3-gif p5-gif">
+					<h1>如何解决这些问题?</h1>
+					<img src="./img/question-mask.gif" alt="" />
+				</div>
+				<div class="p3-category p5-category">
+					<ol class="p3-sub-category" style="font-size: 12px; text-align: left">
+						<li><a href="#">减少温室气体排放、保护土壤和生物多样性的再生农业实践种植更多的粮食</a></li>
+						<li><a href="#">在保持林业可持续发展的情况下尽可能多地保护物种</a></li>
+						<li>
+							<a href="#"
+								>以已退化的土地也为基础设施提供适宜的机会，在满足人类需求的同时，把对自然影响降到最低</a
+							>
+						</li>
+						<li>
+							<a href="#"
+								>保护生物多样性，把包含保护对象在内的一定面积的陆地或水体划分出来，进行保护和管理</a
+							>
+						</li>
+						<li>
+							<a href="#"
+								>通过建立不同形式的保护设施，对比较珍贵的物种、具有观赏价值的物种或其基因实施由人工辅助的保护</a
+							>
+						</li>
+						<li><a href="#">建立全球性的基因库网，实现保存物种的愿望</a></li>
+						<li><a href="#">用法律手段，完善相关法律制度保护生物多样性</a></li>
+						<li><a href="#">从身边的每一件小事做起</a></li>
+					</ol>
+					<div class="p5-pic">
+						<div class="img">
+							<img src="./img/p5/P14-1.jpg" />
+							<span>自带环保袋</span>
+						</div>
+						<div class="img">
+							<img src="./img/p5/P14-2.jpg" />
+							<span>不买动物皮毛制品</span>
+						</div>
+						<div class="img">
+							<img src="./img/p5/P14-3.jpg" />
+							<span>拒吃野生动物</span>
+						</div>
+						<div class="img">
+							<img src="./img/p5/P14-4.jpg" />
+							<span>做好垃圾分类</span>
+						</div>
+						<div class="img">
+							<img src="./img/p5/P14-5.jpg" />
+							<span>随手关闭电源</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="btn-wrapper">
+					<img @click="onStepClick('3')" class="btn" src="./img/left.png" alt="" />
+					<img @click="onStepClick('5')" class="btn" src="./img//right.png" alt="" />
+				</div>
+			</div>
+			<!-- p6 -->
+			<div id="p6" class="p3" v-show="step==='5'">
+				<div class="p3-gif">
+					<img src="./img/cartoon.gif" alt="" style="cursor: pointer" @click="onStepClick('0')" />
+					<a alt="点击有彩蛋" href="#p6m"><img class="egg" src="./img/egg.png" /></a>
+				</div>
+				<div id="p6-word" class="p2-word"></div>
+				<div class="btn-wrapper">
+					<img @click="onStepClick('4')" class="btn" src="./img/left.png" alt="" />
+					<img
+						@click="onStepClick('0')"
+						class="btn"
+						style="width: 35px; height: 35px"
+						src="./img//back.png"
+						alt="返回首页"
+					/>
+				</div>
+
+				<section
+					class="modal--show"
+					id="p6m"
+					tabindex="-1"
+					role="dialog"
+					aria-labelledby="modal-label"
+					aria-hidden="true"
+				>
+					<div class="modal-inner">
+						<!-- <header id="modal-label" class="modal-title">生物多样性很重要</header> -->
+						<div class="modal-content p6-modal">
+							<p>
+								1972年6月5日至16日，在瑞典的首都斯德哥尔摩召开了有113个国家、1300多名代表出席的联合国人类环境会议，这是世界各国政府共同讨论当代环境问题，探讨保护全球环境战略的第一次会议，是人类环境保护史上的重大里程碑。为纪念斯德哥尔摩会议和发扬会议精神，同年第27届联合国大会确定设立联合国环境规划署的同时，确定了每年6月5日为“世界环境日”。
+							</p>
+							<p>
+								2020年6月5日世界环境日聚焦“生物多样性”，主题为“关爱自然，刻不容缓” (Time for
+								Nature)，由哥伦比亚主办，德国予以支持。在我们全力以赴应对2019冠状病毒病“大流行”以及愈演愈烈的气候危机的当下，我们也绝不能忽视生物多样性问题。今年的世界环境日呼吁大家采取行动，遏制自然界不断加速的物种丧失和自然栖息地退化趋势。
+							</p>
+						</div>
+						<!-- <footer>Footer</footer> -->
+					</div>
+					<a href="#!" class="modal-close" title="Close this modal" data-close="Close" data-dismiss="modal"
+						>?</a
+					>
+				</section>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+		<script src="./script/swiper.min.js"></script>
+		<script src="./script/index.min.js"></script>
+	</body>
 </html>
